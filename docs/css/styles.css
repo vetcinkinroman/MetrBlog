@@ -1,0 +1,244 @@
+@font-face {
+  font-family: 'Trebuchet-custom';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Trebuchet-Custom.ttf") format('truetype');
+}
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  background-color: #FFFFFF;
+  color: #848484;
+  padding-top: 120px;
+}
+body * { box-sizing: border-box }
+.holder::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+img {
+  max-width: 100%;
+  width: auto;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  font-weight: normal;
+}
+a {
+  color: #323332;
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 30px 0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: #FFFFFF;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a.logo {
+  font-family: 'Trebuchet-custom', Arial, sans-serif;
+  color: #313131;
+  font-size: 51px;
+}
+a.logo span {
+  color: #595959;
+}
+a.logo span::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #6dd025;
+  position: relative;
+  top: 2px;
+  right: 3px;
+}
+#menu-checkbox, .mobile-menu {
+  display: none;
+}
+nav a {
+  font-size: 23px;
+  display: inline-block;
+  padding: 3px 12px;
+  margin-left: 38px;
+  transition: background-color .7s, color .7s;
+}
+nav a:hover {
+  color: #FFFFFF;
+  background-color: #373737;
+}
+.banner {
+  padding: 80px 0 50px;
+  text-align: center;
+}
+main.main-container > section {
+  padding-right: 333px;
+}
+aside {
+  float: right;
+}
+.right-banner {
+  padding-bottom: 26px;
+}
+.article-banner {
+  float: left;
+  margin: 0 18px 18px 0;
+}
+h1 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+main section article.holder {
+  overflow: hidden;
+}
+.article-item {
+  float: left;
+  padding: 20px 15px 15px 0;
+  width: 33%;
+}
+.article-item span {
+  font-size: 14px;
+  display: block;
+}
+.article-item p {
+  margin-top: 10px;
+  text-align: justify;
+}
+footer {
+  background-color: #393a39;
+  color: #FFFFFF;
+  padding: 24px 0;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  text-align: center;
+}
+footer .wrapper {
+  position: relative;
+}
+footer a {
+  color: #FFFFFF;
+}
+.socials {
+  position: absolute;
+  right: 0;
+  top: -5px;
+  font-size: 0;
+}
+.socials a {
+  display: inline-block;
+  margin-left: 12px;
+}
+.socials a img {
+  width: 30px;
+}
+
+@media (max-width: 1050px) {
+  .wrapper {
+    padding: 0 12px;
+  }
+  .socials {
+    right: 12px;
+  }
+}
+
+@media (max-width: 970px) {
+  main.main-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  aside {
+    float: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .right-banner {
+    padding: 12px;
+    display: inline-flex;
+    align-items: center;
+  }
+  main.main-container > section {
+    padding-right: 0;
+  }
+  .article-item {
+    width: 50%;
+  }
+}
+@media (max-width: 810px) {
+  .mobile-menu {
+    display: inline-flex;
+    cursor: pointer;
+  }
+  .mobile-menu img {
+    width: 48px;
+  }
+  nav {
+    display: none;
+  }
+  header .wrapper {
+    position: relative;
+  }
+  input#menu-checkbox:checked + nav {
+    display: block;
+    position: absolute;
+    background-color: #FFFFFF;
+    padding: 12px 24px;
+    top: 100%;
+    right: 12px;
+    border: 1px solid #848484;
+  }
+  input#menu-checkbox:checked + nav a {
+    display: block;
+    margin: 6px 0;
+  }
+}
+@media (max-width: 690px) {
+  .article-item {
+    float: none;
+    width: 100%;
+    padding: 12px 0;
+  }
+  aside {
+    flex-direction: column;
+    align-items: center;
+  }
+  main section article.holder {
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #848484;
+    margin-bottom: 24px;
+    font-size: 18px;
+  }
+  .article-banner {
+    display: none;
+  }
+  footer .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  footer .wrapper .socials {
+    position: static;
+    padding-bottom: 12px;
+  }
+  footer .wrapper .socials img {
+    width: 48px;
+  }
+}
